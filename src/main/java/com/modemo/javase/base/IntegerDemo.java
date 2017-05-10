@@ -17,11 +17,13 @@ public class IntegerDemo {
 		int 美国总统 = 0;
 		int 法国第一夫人 = 0;
 		int 美国第一夫人 = 0;
-		美国总统 = 美国第一夫人 + 24;
-		法国总统 = 法国第一夫人 - 24;
 		美国总统 = 法国总统 + 32;
 		美国第一夫人 = 美国总统 - 24;
 		法国第一夫人 = 法国总统 + 24;
+		System.out.println("美国总统 "+美国总统+" 岁");
+		System.out.println("法国总统 "+法国总统+" 岁");
+		System.out.println("美国第一夫人 "+美国第一夫人+" 岁");
+		System.out.println("法国第一夫人 "+法国第一夫人+" 岁");
 		System.out.println("美国第一夫人比法国第一夫人小  "+(美国第一夫人-法国第一夫人)+" 岁！");
 	}
 }
