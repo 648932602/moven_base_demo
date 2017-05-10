@@ -24,6 +24,6 @@ public class IntegerDemo {
 		System.out.println("法国总统 "+法国总统+" 岁");
 		System.out.println("美国第一夫人 "+美国第一夫人+" 岁");
 		System.out.println("法国第一夫人 "+法国第一夫人+" 岁");
-		System.out.println("美国第一夫人比法国第一夫人小  "+(美国第一夫人-法国第一夫人)+" 岁！");
+		System.out.println("美国第一夫人比法国第一夫人小  "+(法国第一夫人-美国第一夫人)+" 岁！");
 	}
 }
