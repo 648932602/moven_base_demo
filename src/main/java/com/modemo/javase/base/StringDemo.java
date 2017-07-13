@@ -1,10 +1,18 @@
 package com.modemo.javase.base;
 
+import java.text.MessageFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.modemo.javase.util.DateUtil;
+
 public class StringDemo {
-	private static Pattern prefixRegx = Pattern.compile("^[a-zA-Z]+");// 判断工位编号连续前缀
+	// 判断工位编号连续前缀
+	private static Pattern prefixRegx = Pattern.compile("^[a-zA-Z]+");
+	// 信息模板
+	private static String infoTemp = "%s月%s日  %s  预约%s个工位";
+	// 格式模板
+	private static String styleTemp = "{0}月{1}日  {2}  预约{3}个工位";
 
 	public static void main(String[] args) {
 		// System.out.println("1".equals(null));
@@ -15,8 +23,17 @@ public class StringDemo {
 //		String testSubString = "aabbcc";
 //		testSubString = testSubString.substring(0);
 //		System.out.println(testSubString);
-		boolean isContinue = isContinue("1001", "1002");
-		System.out.println(isContinue);
+//		boolean isContinue = isContinue("1001", "1002");
+//		System.out.println(isContinue);
+//		System.out.println(String.format(infoTemp, 123, 100, 456, 111));
+//		System.out.println(MessageFormat.format(styleTemp, DateUtil.getCurrentDate(), 100, 456));
+//		String t1 = "13:00";
+//		String t2 = null;
+//		String t3 = DateUtil.getCurrentDateStr(DateUtil.C_HHMM);
+//		System.out.println(t1.compareTo(t2));
+		String name = "北京";
+		System.out.println(name.replace("市", ""));
+		
 	}
 
 	private static boolean isContinue(String a, String b) {
