@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import com.modemo.javase.entity.ChildBean;
+import com.modemo.javase.entity.ParentBean;
+
 public class ListDemo {
 	public static void main(String[] args) {
-		List<Integer> ids1 = new ArrayList<Integer>(10);
-		ids1.add(1);
-		ids1.add(1);
-		ids1.add(2);
-		ids1.add(3);
+//		List<Integer> ids1 = new ArrayList<Integer>(10);
+//		ids1.add(1);
+//		ids1.add(1);
+//		ids1.add(2);
+//		ids1.add(3);
 //		ids1.add(null);
 //		ids1.add(null);
 //		ids1.add(null);
@@ -22,16 +25,16 @@ public class ListDemo {
 //		Set<Integer> idSet = new HashSet<Integer>();
 //		idSet.addAll(ids1);
 //		idSet.addAll(ids2);
-		for (Integer id : ids1) {
-//			System.out.println(ids1.indexOf(id));
-			System.out.println(id.toString());
-		}
-		System.out.println("倒序");
-		Collections.reverse(ids1);
-		for (Integer id : ids1) {
-//			System.out.println(ids1.indexOf(id));
-			System.out.println(id.toString());
-		}
+//		for (Integer id : ids1) {
+////			System.out.println(ids1.indexOf(id));
+//			System.out.println(id.toString());
+//		}
+//		System.out.println("倒序");
+//		Collections.reverse(ids1);
+//		for (Integer id : ids1) {
+////			System.out.println(ids1.indexOf(id));
+//			System.out.println(id.toString());
+//		}
 		
 //		List<Integer> ids3 = Collections.emptyList();
 //		for (Integer id : ids3) {
@@ -53,17 +56,48 @@ public class ListDemo {
 //		
 //		ChildBean c11 = new ChildBean();
 //		c11.setId(11);
-//		c11.setName("11");
 //		ChildBean c12 = new ChildBean();
 //		c12.setId(12);
-//		c12.setName("12");
 //		ChildBean c13 = new ChildBean();
 //		c13.setId(13);
-//		c13.setName("13");
 //		
 //		children1.add(c11);
 //		children1.add(c12);
 //		children1.add(c13);
+		removeAll();
+	}
+	
+	private static void removeAll() {
+		List<ChildBean> children1 = new ArrayList<ChildBean>(3);
+		List<ChildBean> children2 = new ArrayList<ChildBean>(3);
 		
+		ChildBean c11 = new ChildBean();
+		c11.setId(11);
+		ChildBean c12 = new ChildBean();
+		c12.setId(12);
+		ChildBean c13 = new ChildBean();
+		c13.setId(13);
+		
+		children1.add(c11);
+		children1.add(c12);
+		children1.add(c13);
+		
+		System.out.println("------before------");
+		for (ChildBean childBean : children1) {
+			if(12 == childBean.getId()) {
+				childBean.setName("12");
+			}
+			System.out.println("---index = "+children1.indexOf(childBean)+"---");
+			System.out.println("name = "+childBean.getName());
+			System.out.println("--------------");
+		}
+		children2.add(c12);
+		children1.removeAll(children2);
+		System.out.println("------after-------");
+		for (ChildBean childBean : children1) {
+			System.out.println("---index = "+children1.indexOf(childBean)+"---");
+			System.out.println("name = "+childBean.getName());
+			System.out.println("--------------");
+		}
 	}
 }
