@@ -4,24 +4,29 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import com.modemo.javase.entity.ChildBean;
-import com.modemo.javase.entity.ParentBean;
+import com.modemo.javase.entity.family.ChildBean;
+import com.modemo.javase.entity.family.ParentBean;
 
 public class ListDemo {
 	public static void main(String[] args) {
-//		List<Integer> ids1 = new ArrayList<Integer>(10);
-//		ids1.add(1);
-//		ids1.add(1);
-//		ids1.add(2);
-//		ids1.add(3);
+		List<Integer> ids1 = new ArrayList<Integer>(10);
+		ids1.add(1);
+		ids1.add(2);
+		ids1.add(3);
+		ids1.add(4);
+		ids1.add(5);
+		ids1.add(6);
+//		System.out.println(ids1.contains(null));
 //		ids1.add(null);
 //		ids1.add(null);
 //		ids1.add(null);
-//		List<Integer> ids2 = new ArrayList<Integer>(10);
-//		ids2.add(5);
-//		ids2.add(6);
-//		ids2.add(7);
-//		ids2.add(8);
+		List<Integer> ids2 = new ArrayList<Integer>(10);
+		ids2.add(5);
+		ids2.add(6);
+		ids2.add(7);
+		ids2.add(8);
+		ids1.retainAll(ids2);
+		System.out.println(ids1);
 //		Set<Integer> idSet = new HashSet<Integer>();
 //		idSet.addAll(ids1);
 //		idSet.addAll(ids2);
@@ -64,7 +69,7 @@ public class ListDemo {
 //		children1.add(c11);
 //		children1.add(c12);
 //		children1.add(c13);
-		removeAll();
+//		removeAll();
 	}
 	
 	private static void removeAll() {

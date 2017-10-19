@@ -1,6 +1,8 @@
-package com.modemo.javase.entity;
+package com.modemo.javase.entity.family;
 
 import java.util.List;
+
+import com.modemo.javase.entity.BaseBean;
 
 public class ParentBean extends BaseBean{
 	

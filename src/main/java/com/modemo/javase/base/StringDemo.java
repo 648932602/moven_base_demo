@@ -4,6 +4,8 @@ import java.text.MessageFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.lang.StringUtils;
+
 import com.modemo.javase.util.DateUtil;
 
 public class StringDemo {
@@ -31,9 +33,10 @@ public class StringDemo {
 //		String t2 = null;
 //		String t3 = DateUtil.getCurrentDateStr(DateUtil.C_HHMM);
 //		System.out.println(t1.compareTo(t2));
-		String name = "12";
-		System.out.println(name.length());
+//		String name = "12";
+//		System.out.println(name.length());
 //		System.out.println(name.replace("市", ""));
+		System.out.println(replace());
 		
 	}
 
@@ -72,5 +75,12 @@ public class StringDemo {
 			}
 		}
 		return isContinue;
+	}
+	
+	private static String replace() {
+		String path = "10_";
+		path = StringUtils.replace(path, "_", "\\_");
+//		path = path.replace("_", "\\_");
+		return path;
 	}
 }
