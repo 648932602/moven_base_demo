@@ -1,12 +1,15 @@
 package com.modemo.javase.base;
 
-import java.text.MessageFormat;
+import java.math.BigDecimal;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.modemo.javase.util.DateUtil;
+import com.alibaba.druid.pool.vendor.SybaseExceptionSorter;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
+import com.moven.common.utils.MoneyUtil;
 
 public class StringDemo {
 	// 判断工位编号连续前缀
@@ -17,27 +20,24 @@ public class StringDemo {
 	private static String styleTemp = "{0}月{1}日  {2}  预约{3}个工位";
 
 	public static void main(String[] args) {
-		// System.out.println("1".equals(null));
-		// String[] ids = "1".split(",");
-		// for (String id : ids) {
-		// System.out.println(id);
-		// }
-//		String testSubString = "aabbcc";
-//		testSubString = testSubString.substring(0);
-//		System.out.println(testSubString);
-//		boolean isContinue = isContinue("1001", "1002");
-//		System.out.println(isContinue);
-//		System.out.println(String.format(infoTemp, 123, 100, 456, 111));
-//		System.out.println(MessageFormat.format(styleTemp, DateUtil.getCurrentDate(), 100, 456));
-//		String t1 = "13:00";
-//		String t2 = null;
-//		String t3 = DateUtil.getCurrentDateStr(DateUtil.C_HHMM);
-//		System.out.println(t1.compareTo(t2));
-//		String name = "12";
-//		System.out.println(name.length());
-//		System.out.println(name.replace("市", ""));
-		System.out.println(replace());
-		
+		BigDecimal money = new BigDecimal("150015641575.23");
+		System.out.println(MoneyUtil.getMoneyCDesc(money));
+	}
+	private static Boolean testR() {
+		System.out.println("r");
+		return null;
+	}
+	
+	private static Integer testD() {
+		testR();
+		System.out.println("d");
+		return null;
+	}
+	
+	private static void testE() {
+		String settingStr = "{\"wsbtnEnabled\":\"false\",\"wsradio\":\"btnCity\"}";
+		JSONObject setting = JSON.parseObject(settingStr);
+		System.out.println(setting.getString("wsradio"));
 	}
 
 	private static boolean isContinue(String a, String b) {
@@ -83,4 +83,12 @@ public class StringDemo {
 //		path = path.replace("_", "\\_");
 		return path;
 	}
+	
+	private static String nullToJson() {
+		String path = "";
+		JSONObject o = JSON.parseObject(path);
+		System.out.println("o = "+o);
+		return path;
+	}
+	
 }

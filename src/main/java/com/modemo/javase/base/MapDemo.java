@@ -12,6 +12,7 @@ import java.util.Map.Entry;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.MapUtils;
 
+import com.google.common.collect.Maps;
 import com.modemo.javase.entity.tree.TreeNode;
 
 public class MapDemo {
@@ -46,14 +47,27 @@ public class MapDemo {
 //		}
 //		System.out.println("-E--"+System.currentTimeMillis()+"---");
 //		putIfAbsent();
-		List<TreeNode> tempNode = new ArrayList<TreeNode>(1);
-		tempNode.add(get(1));
-		TreeNode node = tempNode.get(0);
-		System.out.println(get(1));
-		tree.remove(1);
-		System.out.println(node);
-		System.out.println(get(1));
-		System.out.println(node.getName());
+//		List<TreeNode> tempNode = new ArrayList<TreeNode>(1);
+//		tempNode.add(get(1));
+//		TreeNode node = tempNode.get(0);
+//		System.out.println(get(1));
+//		tree.remove(1);
+//		System.out.println(node);
+//		System.out.println(get(1));
+//		System.out.println(node.getName());
+		
+		Map<Integer, String> linkMap = Maps.newLinkedHashMapWithExpectedSize(5);
+		linkMap.put(1, "1");
+		linkMap.put(2, "2");
+		linkMap.put(3, "3");
+		linkMap.put(4, "4");
+		linkMap.put(5, "5");
+		
+		for (String value : linkMap.values()) {
+			System.out.println(value);
+		}
+		
+		
 	}
 	
 	public static TreeNode get(Integer key) {

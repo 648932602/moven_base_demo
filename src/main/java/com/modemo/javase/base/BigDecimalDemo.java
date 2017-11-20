@@ -12,7 +12,8 @@ public class BigDecimalDemo {
 //		a = b;
 //		b = c;
 //		System.out.println("a = "+a+", b = "+b);
-		getDistence(a, b);
+//		getDistence(a, b);
+		System.out.println(getString());
 	}
 	public static void getDistence(BigDecimal latitude, BigDecimal longitude){
 		 // 地球半径千米
@@ -34,5 +35,11 @@ public class BigDecimalDemo {
         System.out.println("maxlat = "+maxlat);
         System.out.println("minlng = "+minlng);
         System.out.println("maxlng = "+maxlng);
+	}
+	
+	public static String getString() {
+		BigDecimal floatValue = new BigDecimal("20000000000000000000");
+		System.out.println(floatValue);
+		return floatValue.toString();
 	}
 }

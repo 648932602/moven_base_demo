@@ -11,5 +11,11 @@
 	<artifactId>moven_base_demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<build />
+	<dependencies>
+		<dependency>
+			<groupId>com.moven</groupId>
+			<artifactId>moven_common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>

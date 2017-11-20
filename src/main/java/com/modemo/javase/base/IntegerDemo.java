@@ -25,12 +25,10 @@ public class IntegerDemo {
 //		System.out.println("美国第一夫人 "+美国第一夫人+" 岁");
 //		System.out.println("法国第一夫人 "+法国第一夫人+" 岁");
 //		System.out.println("美国第一夫人比法国第一夫人小  "+(法国第一夫人-美国第一夫人)+" 岁！");
-//		testEqual();
+		testEqual();
 	}
 	private static void testEqual() {
-		Integer a = null;
-		Integer b = 128;
-		
-		System.out.println(b.equals(a));
+		Integer a = 200;
+		System.out.println(a == null);
 	}
 }
