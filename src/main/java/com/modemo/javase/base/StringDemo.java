@@ -20,8 +20,16 @@ public class StringDemo {
 	private static String styleTemp = "{0}月{1}日  {2}  预约{3}个工位";
 
 	public static void main(String[] args) {
-		BigDecimal money = new BigDecimal("150015641575.23");
-		System.out.println(MoneyUtil.getMoneyCDesc(money));
+		String maxSerialNumber = "12345678900000001";
+		Integer nextSerialNumber = Integer.parseInt(maxSerialNumber.substring(maxSerialNumber.length() - 8)) + 1;
+		String nextSNStr = String.valueOf(nextSerialNumber);
+		int currentLength = nextSNStr.length();
+		for (int i = 8; i > currentLength; i--) {
+			nextSNStr = "0" + nextSNStr;
+		}
+		System.out.println(nextSNStr);
+//		String a = "12345678987654321";
+//		System.out.println(a.substring(a.length()-6));
 	}
 	private static Boolean testR() {
 		System.out.println("r");

@@ -29,6 +29,6 @@ public class IntegerDemo {
 	}
 	private static void testEqual() {
 		Integer a = 200;
-		System.out.println(a == null);
+		System.out.println(a.SIZE);
 	}
 }
