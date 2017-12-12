@@ -15,4 +15,5 @@ public class JsonDemo {
 		objMap.put("c", new Double(2.0));
 		System.out.println(JSON.toJSONString(objMap));
 	}
+	
 }

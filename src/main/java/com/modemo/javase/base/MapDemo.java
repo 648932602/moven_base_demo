@@ -56,18 +56,26 @@ public class MapDemo {
 //		System.out.println(get(1));
 //		System.out.println(node.getName());
 		
-		Map<Integer, String> linkMap = Maps.newLinkedHashMapWithExpectedSize(5);
-		linkMap.put(1, "1");
-		linkMap.put(2, "2");
-		linkMap.put(3, "3");
-		linkMap.put(4, "4");
-		linkMap.put(5, "5");
-		
-		for (String value : linkMap.values()) {
-			System.out.println(value);
-		}
-		
-		
+//		Map<Integer, String> linkMap = Maps.newLinkedHashMapWithExpectedSize(5);
+//		linkMap.put(1, "1");
+//		linkMap.put(2, "2");
+//		linkMap.put(3, "3");
+//		linkMap.put(4, "4");
+//		linkMap.put(5, "5");
+//		
+//		for (String value : linkMap.values()) {
+//			System.out.println(value);
+//		}
+		pubSub();
+	}
+	
+	public static void pubSub() {
+		Map<String, Object> pMap = new HashMap<String, Object>(2);
+		Map<String, Object> subMap = new HashMap<String, Object>(2);
+		subMap.put("name", "子集合");
+		pMap.put("sub", subMap);
+		pMap.put("sub.id", 1);
+		System.out.println(subMap.get("id"));
 	}
 	
 	public static TreeNode get(Integer key) {

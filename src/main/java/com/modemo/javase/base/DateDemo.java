@@ -30,12 +30,18 @@ public class DateDemo {
 //		Object date = new Long("1510129158000");
 //		Object type = TypeUtils.castToDate(date);
 //		System.out.println(type);
-		timeToDate();
+//		timeToDate();
+		longToTime();
 	}
 	
 	public static void timeToDate() {
-		String time = "10:00";
+		String time = "01:20";
 		Date date = DateUtil.parseStringToDate(time, DateUtil.C_HHMM);
+		System.out.println(date.getTime());
+	}
+	public static void longToTime() {
+		Long time = 0L;
+		Date date = new Date(time);
 		System.out.println(date);
 	}
 }

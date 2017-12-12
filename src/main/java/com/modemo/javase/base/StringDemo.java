@@ -1,15 +1,15 @@
 package com.modemo.javase.base;
 
-import java.math.BigDecimal;
+import java.text.MessageFormat;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 
-import com.alibaba.druid.pool.vendor.SybaseExceptionSorter;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.moven.common.utils.MoneyUtil;
 
 public class StringDemo {
 	// 判断工位编号连续前缀
@@ -18,18 +18,20 @@ public class StringDemo {
 	private static String infoTemp = "%s月%s日  %s  预约%s个工位";
 	// 格式模板
 	private static String styleTemp = "{0}月{1}日  {2}  预约{3}个工位";
+	
 
 	public static void main(String[] args) {
-		String maxSerialNumber = "12345678900000001";
-		Integer nextSerialNumber = Integer.parseInt(maxSerialNumber.substring(maxSerialNumber.length() - 8)) + 1;
-		String nextSNStr = String.valueOf(nextSerialNumber);
-		int currentLength = nextSNStr.length();
-		for (int i = 8; i > currentLength; i--) {
-			nextSNStr = "0" + nextSNStr;
-		}
-		System.out.println(nextSNStr);
+//		String maxSerialNumber = "12345678900000001";
+//		Integer nextSerialNumber = Integer.parseInt(maxSerialNumber.substring(maxSerialNumber.length() - 8)) + 1;
+//		String nextSNStr = String.valueOf(nextSerialNumber);
+//		int currentLength = nextSNStr.length();
+//		for (int i = 8; i > currentLength; i--) {
+//			nextSNStr = "0" + nextSNStr;
+//		}
+//		System.out.println(nextSNStr);
 //		String a = "12345678987654321";
 //		System.out.println(a.substring(a.length()-6));
+		System.out.println(MessageFormat.format(styleTemp, 1,2,3,4));
 	}
 	private static Boolean testR() {
 		System.out.println("r");
