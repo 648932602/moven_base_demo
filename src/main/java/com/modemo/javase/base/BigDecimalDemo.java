@@ -5,15 +5,22 @@ import java.text.DecimalFormat;
 
 public class BigDecimalDemo {
 	public static void main(String[] args) {
-		BigDecimal a = new BigDecimal(39.959415);
-		BigDecimal b = new BigDecimal(116.486727);
+//		BigDecimal a = new BigDecimal(39.959415);
+//		BigDecimal b = new BigDecimal(116.486727);
+		BigDecimal a = BigDecimal.ZERO;
+		BigDecimal b = new BigDecimal(4566.00);
 //		System.out.println("a = "+a+", b = "+b);
 //		BigDecimal c = a;
 //		a = b;
 //		b = c;
-//		System.out.println("a = "+a+", b = "+b);
+		System.out.println("a = "+a+", b = "+b);
+//		for (int i = 0; i < 3; i++) {
+//			a = a.subtract(b);
+//		}
+		System.out.println(a.subtract(b).subtract(b));
+		System.out.println("a = "+a+", b = "+b);
 //		getDistence(a, b);
-		System.out.println(getString());
+//		System.out.println(getString());
 	}
 	public static void getDistence(BigDecimal latitude, BigDecimal longitude){
 		 // 地球半径千米

@@ -1,7 +1,5 @@
 package com.modemo.javase.base;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,7 +10,6 @@ import java.util.Map.Entry;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.MapUtils;
 
-import com.google.common.collect.Maps;
 import com.modemo.javase.entity.tree.TreeNode;
 
 public class MapDemo {
@@ -66,7 +63,9 @@ public class MapDemo {
 //		for (String value : linkMap.values()) {
 //			System.out.println(value);
 //		}
-		pubSub();
+//		pubSub();
+//		getBytes();
+		putAllForUpdate();
 	}
 	
 	public static void pubSub() {
@@ -156,6 +155,34 @@ public class MapDemo {
 				a = putMap.get(i%4);
 			}
 			System.out.println(a);
+		}
+	}
+	
+	public static void getBytes() {
+//		File file = new File(WkhtmlToPDFUtil.DEST_HTML);
+//		try {
+//			byte[] bytes = IOUtils.toByteArray(file.toURI());
+//			System.out.println(bytes);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+	}
+	
+	public static void putAllForUpdate() {
+		Map<String, Integer> a = new HashMap<String, Integer>(5);
+		a.put("1", 1);
+		a.put("2", 1);
+		a.put("3", 1);
+		a.put("4", 1);
+		Map<String, Integer> b = new HashMap<String, Integer>(5);
+		b.put("1", 1);
+		b.put("2", 2);
+		b.put("3", 3);
+		b.put("4", 4);
+		a.putAll(b);
+		for (Map.Entry<String, Integer> entry : a.entrySet()) {
+			System.out.println("K - "+entry.getKey()+", V - "+entry.getValue());
 		}
 	}
 }

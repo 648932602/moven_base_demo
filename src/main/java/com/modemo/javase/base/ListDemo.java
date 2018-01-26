@@ -1,16 +1,13 @@
 package com.modemo.javase.base;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import org.apache.commons.collections.CollectionUtils;
+import java.util.Set;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 import com.modemo.javase.entity.family.ChildBean;
-import com.modemo.javase.entity.family.ParentBean;
 
 public class ListDemo {
 	public static void main(String[] args) {
@@ -81,6 +78,18 @@ public class ListDemo {
 		// children1.add(c12);
 		// children1.add(c13);
 		// removeAll();
+		Set<Integer> intSet = Sets.newHashSet(9,6,4,8,5,3,4,54,564,4,4,456,16,6,5,1,1);
+		System.out.println("--- Set ---");
+		for (Integer set : intSet) {
+			System.out.print(set+",");
+		}
+		List<Integer> intList = Lists.newArrayList(intSet);
+		Collections.sort(intList);
+		System.out.println();
+		System.out.println("--- List ---");
+		for (Integer list : intList) {
+			System.out.print(list+",");
+		}
 	}
 
 	private static void removeAll() {
